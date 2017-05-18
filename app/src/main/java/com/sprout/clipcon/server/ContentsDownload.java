@@ -77,7 +77,6 @@ public class ContentsDownload {
                 switch (requestContents.getContentsType()) {
                     case Contents.TYPE_STRING:
                         String stringData = downloadStringData(httpConn.getInputStream());
-                        // TODO: 17-05-13 insert to clipboard
                         Log.d("delf", "[CLIENT] received test data: " + stringData);
                         break;
 
@@ -133,7 +132,6 @@ public class ContentsDownload {
         return stringBuilder.toString();
     }
 
-    // test code
     // test code
     private File downloadImageData(InputStream inputStream) throws IOException {
         String fileName = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date()) + ".png";
